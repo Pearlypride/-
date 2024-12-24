@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.spinner-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+    display: flex;
+    position: absolute;
+    left: 0; /* Important for animation */
+    transition: transform 5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Added easing */
+}
+
+.spinner img {
+    width: 300px;
+    height: 150px;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.indicator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.8);
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #cc5200;
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
